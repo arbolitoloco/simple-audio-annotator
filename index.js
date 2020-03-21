@@ -14,7 +14,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
 // Function triggered when pressing keys
 Mousetrap.bind('alt+a', startMarker);
 Mousetrap.bind('alt+t', addAnnotation);
-Mousetrap.bind(['alt+e', 'meta+s'], function(e) {
+Mousetrap.bind(['alt+e', 'meta+e'], function(e) {
   if (e.preventDefault) {
     e.preventDefault();
   } else {
@@ -64,7 +64,7 @@ function startMarker() {
   // Adds div for each marker group
   var markerGroup = document.createElement("ul");
   markerGroup.setAttribute("class", "marker-group");
-  markerGroup.textContent = "This is a marker group";
+  // markerGroup.textContent = "This is a marker group";
   markerGroup.addEventListener("click", function(e) {
     e.preventDefault();
   });
