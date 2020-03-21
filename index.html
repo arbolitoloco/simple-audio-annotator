@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Audio Annotator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Simple Audio Annotator</h1>
+  <h2>Quickstart</h2>
+  <ol>
+    <li>Load file</li>
+    <li>Press "space bar" or "play" to start listening</li>
+    <li>Press "ALT + A" to add start timestamp</li>
+    <li>Press "ALT + E" to add end timestamp to first unset timtestamp group.</li>
+    <li>Press "ALT + T" to add text to first unset timestamp group.</li>
+  </ol>
+  <h4>All time stamp fields are editable if you click once on them.</h4>
+  <h4>Limitations</h4>
+  <ul>
+    <li>Download retrieves everything in the Timestamps block, in .txt format.</li>
+    <li>Only way to change file loaded is refreshing the page.</li>
+    <li>No local storage, if you refresh the page you lose your progress. Download content often.</li>
+  </ul>
+  <div id="file-input">
+    <h2>Select a File</h2>
+    <!-- <input type="file" id="audio-picker" accept=".mp3,.wav" onchange="handleFiles(this.files)"> -->
+    <input type="file" id="audio-picker" accept=".mp3,.wav">
+  </div>
+  <div id="audio-container" class="hide">
+    <h2>Audio File</h2>
+    <audio id="myAudio" controls>
+      <source src="" type="audio/mpeg" >Your browser does not support the audio element.</source>
+    </audio>
+  </div>
+  <div id="markers-wrapper" class="hide">
+    <h2>Timestamps</h2>
+    <input type="button" id="dwn-btn" value="Download annotations" />
+  </div>
+</body>
+<!-- Reference mousetrap from a local file -->
+<script src="mousetrap.min.js"></script>
+<script src="index.js"></script>
+
+</html>

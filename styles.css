@@ -1,0 +1,9 @@
+.marker-group {
+  border: 1px solid gray;
+}
+
+.hide,
+.no-end,
+.no-annotation {
+  display: none;
+}
