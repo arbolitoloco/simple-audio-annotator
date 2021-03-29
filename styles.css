@@ -7,3 +7,14 @@
 .no-annotation {
   display: none;
 }
+
+
+/* body {
+  display: grid;
+} */
+
+body {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template: auto 1fr auto / auto 1fr auto;
+}
